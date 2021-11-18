@@ -1,0 +1,5921 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/login
+    metadata:
+      title: 'Login Method For Admin Dashboard'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: jayson.quigley@example.org
+        type: string
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: tsjejkcc
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/contact
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: consectetur
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: lonie.stark@example.com
+        type: string
+      message:
+        name: message
+        description: ''
+        required: true
+        example: ea
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/logout
+    metadata:
+      title: 'LogOut Method From Admin'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/admin/setting
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: je
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/auth
+    metadata:
+      title: 'seller Method For Seller Dashboard'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/notification
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/notification
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: api/admin/notification
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/buyer
+    metadata:
+      title: 'This Trait For Handling Default Messages Of Controller'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/buyer/{buyer}/delete'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      buyer:
+        name: buyer
+        description: ''
+        required: true
+        example: 13
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/carousel
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/seller/{carousel}/carousel/admin'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      carousel:
+        name: carousel
+        description: ''
+        required: true
+        example: 4
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/carousel/{carousel}/delete'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      carousel:
+        name: carousel
+        description: ''
+        required: true
+        example: 11
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/tag
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/seller/{tag}/tag/admin'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      tag:
+        name: tag
+        description: ''
+        required: true
+        example: 17
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/tag/{tag}/delete'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      tag:
+        name: tag
+        description: ''
+        required: true
+        example: 13
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/message
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/admin/message/{id}/{type}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the message.'
+        required: true
+        example: dolore
+        type: string
+      type:
+        name: type
+        description: ''
+        required: true
+        example: animi
+        type: string
+    queryParameters: []
+    bodyParameters:
+      message:
+        name: message
+        description: 'Must not be greater than 1000 characters.'
+        required: true
+        example: kblshqslgqjsmpjsomtbgvhhplcssdiazewycmcyhowtzyzimlfevjfziysmrmjqcmvgnogdvktshcaeeiszsmacjiwusickanikidaemqdspwkbirvfleirijfcrljkadcsubjhhxylfhlbniflurppneaqhdwrfwuoepxevafsxxdlacqnicwdxxsynubshnifnbpsppeffvzerjyxorxavekslrxpolahldlkomsifxtirgbttogotcolvxuppigmglstlzfpumwhifqmdtwybvntjuoatxdyzxawwmsnhdcspcnsnwbvgwlbxaualnehzwlxuahlocgeyqbfwunuaetoomlozfjjkajjjcfqzespftcldybqrkwqtxmbxkagxuqzqwletxztqiznconnmsxbnkqostyysjndeqdodyqonmsykuwiiihitemhenqfttysylaepqlxofewjndbupodjrlkjuvkmpqvxufmnbiajyvjmdbkuirsuukcxjqzcpmvwlbkwbhzalqmjlszkkhflvwntgbloswiqotcsvoyxfrcqtdaexujsmtrcwdqqkkppishdozlbrccqyhysbiugifjyykdubdmgyikhqleqxipllplyjagnkkzmurzoc
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/message/{message}/delete'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      message:
+        name: message
+        description: ''
+        required: true
+        example: 16
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/meeting
+    metadata:
+      title: 'list All Meetings'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/admin/meeting/{id}/{type}'
+    metadata:
+      title: 'Create Meeting'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the meeting.'
+        required: true
+        example: nemo
+        type: string
+      type:
+        name: type
+        description: ''
+        required: true
+        example: sed
+        type: string
+    queryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: harum
+        type: string
+      topic:
+        name: topic
+        description: ''
+        required: true
+        example: aut
+        type: string
+      start:
+        name: start
+        description: 'Must be a valid date.'
+        required: true
+        example: '2021-11-14T19:24:36'
+        type: string
+      agenda:
+        name: agenda
+        description: ''
+        required: false
+        example: ab
+        type: string
+      duration:
+        name: duration
+        description: 'Must be a valid date.'
+        required: true
+        example: '2021-11-14T19:24:36'
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/meeting/{meeting}'
+    metadata:
+      title: 'Update Meeting'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      meeting:
+        name: meeting
+        description: ''
+        required: true
+        example: 530233
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: quidem
+        type: string
+      topic:
+        name: topic
+        description: ''
+        required: true
+        example: nam
+        type: string
+      start:
+        name: start
+        description: 'Must be a valid date.'
+        required: true
+        example: '2021-11-14T19:24:36'
+        type: string
+      agenda:
+        name: agenda
+        description: ''
+        required: false
+        example: aut
+        type: string
+      duration:
+        name: duration
+        description: 'Must be a valid date.'
+        required: true
+        example: '2021-11-14T19:24:36'
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/meeting/{meeting}/delete'
+    metadata:
+      title: 'Delete Meeting'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      meeting:
+        name: meeting
+        description: ''
+        required: true
+        example: magni
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/seller
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/seller/add
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/category
+    metadata:
+      title: Categories
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/seller/{seller}/active'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 12
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/seller/{seller}/{type}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 5
+        type: integer
+      type:
+        name: type
+        description: ''
+        required: true
+        example: vel
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/seller/download/{seller}'
+    metadata:
+      title: 'Show the form for editing the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 14
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/seller/{seller}/delete'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 12
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/messagecount/sellers
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/admin/messagecount/{seller}/seller'
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 20
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      count:
+        name: count
+        description: 'Must not be greater than 7000.'
+        required: true
+        example: 4109
+        type: number
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/messagecount/{seller}/seller/{message}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 4
+        type: integer
+      message:
+        name: message
+        description: ''
+        required: true
+        example: 19
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/dashboard/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the dashboard.'
+        required: true
+        example: quam
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/message/{seller}'
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: quod
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/seller/{seller}/message/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 5
+        type: integer
+      id:
+        name: id
+        description: 'The ID of the message.'
+        required: true
+        example: fugiat
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/seller/{seller}/message/{message}/delete'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 20
+        type: integer
+      message:
+        name: message
+        description: ''
+        required: true
+        example: inventore
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/product/{seller}'
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: sint
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/seller/{seller}/product/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 15
+        type: integer
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: quia
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/subcategory
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/seller/{seller}/product/{product}/delete'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 13
+        type: integer
+      product:
+        name: product
+        description: ''
+        required: true
+        example: 13
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/meeting/{seller}'
+    metadata:
+      title: 'list All Meetings'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: doloribus
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/seller/{seller}/meeting/{id}'
+    metadata:
+      title: 'get Meeting'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 10
+        type: integer
+      id:
+        name: id
+        description: 'The ID of the meeting.'
+        required: true
+        example: 140700
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/seller/{seller}/meeting/{meeting}/delete'
+    metadata:
+      title: 'Delete Meeting'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 8
+        type: integer
+      meeting:
+        name: meeting
+        description: ''
+        required: true
+        example: harum
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/tag/{seller}'
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: explicabo
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/seller/{seller}/tag/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 5
+        type: integer
+      id:
+        name: id
+        description: 'The ID of the tag.'
+        required: true
+        example: aspernatur
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/seller/{seller}/tag/{tag}/delete'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 20
+        type: integer
+      tag:
+        name: tag
+        description: ''
+        required: true
+        example: 1
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/post/{seller}'
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: possimus
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/seller/{seller}/post/comment/{post}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 15
+        type: integer
+      post:
+        name: post
+        description: ''
+        required: true
+        example: 12
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/seller/{seller}/post/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 2
+        type: integer
+      id:
+        name: id
+        description: 'The ID of the post.'
+        required: true
+        example: iste
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/seller/{seller}/post/{post}/delete'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 20
+        type: integer
+      post:
+        name: post
+        description: ''
+        required: true
+        example: 9
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/carousel/{seller}'
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: sit
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/seller/{seller}/carousel/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 5
+        type: integer
+      id:
+        name: id
+        description: 'The ID of the carousel.'
+        required: true
+        example: voluptas
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/seller/{seller}carousel/{carousel}/delete'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 1
+        type: integer
+      carousel:
+        name: carousel
+        description: ''
+        required: true
+        example: 7
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/order/{seller}'
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: et
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/order/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the order.'
+        required: true
+        example: 6
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/delivery
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/negotiate/{id}'
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the negotiate.'
+        required: true
+        example: quidem
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/seller/{seller}/negotiate/{id}/delete'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: 1
+        type: integer
+      id:
+        name: id
+        description: 'The ID of the negotiate.'
+        required: true
+        example: 13
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/buyer/login
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: darby.luettgen@example.com
+        type: string
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: r
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/buyer/register
+    metadata:
+      title: 'Register Method For Buyer'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: est
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: fredrick.botsford@example.org
+        type: string
+      password:
+        name: password
+        description: 'The value and <code>confirm-password</code> must match. Must be at least 8 characters.'
+        required: true
+        example: zlowjjgu
+        type: string
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: 31.9725
+        type: number
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/phone/{token}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: enim
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/active/{token}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: placeat
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":false,"message":"this token not found or expired"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/buyer/active/{token}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: animi
+        type: string
+    queryParameters: []
+    bodyParameters:
+      phone:
+        name: phone
+        description: 'Must be at least 6.'
+        required: true
+        example: 3
+        type: number
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/buyer/reset
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/buyer/renew/{token}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: libero
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/renew/{token}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: id
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":false,"message":"this token not found or expired"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/carousel
+    metadata:
+      title: 'Slider Method From Buyer'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":true,"message":"Success retrive","data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/carousel/{title}'
+    metadata:
+      title: 'Get Slider Products'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: nihil
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":true,"message":"Success retrive","data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '55'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/tags
+    metadata:
+      title: 'Tags Method From Buyer'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":true,"message":"Success retrive","data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '54'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/category
+    metadata:
+      title: Categories
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":true,"message":"Success retrive","data":[{"id":1,"name_en":"Building materials","name_ar":"\u0645\u0648\u0627\u062f \u0627\u0644\u0628\u0646\u0627\u0621","image":"http:\/\/api.jeemsolutions.com.sa\/images\/categories\/architecture.png"},{"id":2,"name_en":"Contractors","name_ar":"\u0627\u0644\u0645\u0642\u0627\u0648\u0644\u064a\u0646","image":"http:\/\/api.jeemsolutions.com.sa\/images\/categories\/consultant.png"},{"id":3,"name_en":"Engineering offices","name_ar":"\u0627\u0644\u0645\u0643\u0627\u062a\u0628 \u0627\u0644\u0647\u0646\u062f\u0633\u064a\u0629 \u0648\u0627\u0644\u0625\u0633\u062a\u0634\u0627\u0631\u064a\u0629","image":"http:\/\/api.jeemsolutions.com.sa\/images\/categories\/contractors.png"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '53'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/category/{category}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      category:
+        name: category
+        description: ''
+        required: true
+        example: dolorem
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '52'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/sub-category/{category}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      category:
+        name: category
+        description: ''
+        required: true
+        example: qui
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '51'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/sub-category/{category}/products'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      category:
+        name: category
+        description: ''
+        required: true
+        example: iusto
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '50'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/products
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":true,"message":"Success retrive","data":{"current_page":1,"data":[{"id":1,"title":"fgbfbdfg","descri":"gtrgtr htrhtrhtrhr hrt","price":56,"discount":56,"count":45,"rate":null,"images":["http:\/\/api.jeemsolutions.com.sa\/storage\/products\/FpHUkZJZOs0TyaYhiaTaBHm8fyPNDbbOT7Qs0WQV.png","http:\/\/api.jeemsolutions.com.sa\/storage\/products\/JMTjmN2wajcPZiUdQvNVIS9AlV71se5Tc8z3MNLZ.png","http:\/\/api.jeemsolutions.com.sa\/storage\/products\/TKclW5HK7dkVrTYmkHunjtyfkaSBnf49AcFVdkgT.png","http:\/\/api.jeemsolutions.com.sa\/storage\/products\/8CS4ievQyZR174SDMzD0ZbmtspCqBe7feMJGjTkH.png","http:\/\/api.jeemsolutions.com.sa\/storage\/products\/WiwgJbNnBjMiwZZGxgvNe3SkLBIv5yIW33zur2XK.png"],"seller":{"name":"Mahmoud Abd alziem"}},{"id":2,"title":"rthtr htrhtrh","descri":"fdgf,pre,ge rpg,repger,gepr,","price":3,"discount":34,"count":56,"rate":null,"images":["http:\/\/api.jeemsolutions.com.sa\/storage\/products\/RI20wlNmLNJHgwy5Uo6xHZH3rBhK8T78a82gqX7K.png","http:\/\/api.jeemsolutions.com.sa\/storage\/products\/a6eR0Socpb75Yr9idqvxaqHjJez0pDAscpuiiqi2.png","http:\/\/api.jeemsolutions.com.sa\/storage\/products\/gbU54zNTJIhqEEvLL3KpT2dnkHlXRQxid9JSKqol.png","http:\/\/api.jeemsolutions.com.sa\/storage\/products\/4IUOdvk1aRlMOmPSmyChmZ2DVAw9sEDgSOdTqZ8F.png"],"seller":{"name":"Mahmoud Abd alziem"}},{"id":3,"title":"referg greg","descri":"trh[pth p[hp[trh[ptrp[","price":34,"discount":34,"count":6,"rate":null,"images":["http:\/\/api.jeemsolutions.com.sa\/storage\/products\/WVrRWhgQ01eYH1NUCmE9GmxMACs386aBvEybbIon.png","http:\/\/api.jeemsolutions.com.sa\/storage\/products\/Xrryv5fdJYxeDoQRwzTKSSgKAOQFYQe1oZmxSg2x.png","http:\/\/api.jeemsolutions.com.sa\/storage\/products\/GyvV5l8fuQN3mCx0qaBrfC14o0luE96IHBJMVFcq.png"],"seller":{"name":"Mahmoud Abd alziem"}},{"id":4,"title":"rtgtrhtrhrt","descri":"tryhy 5h6 5656565j6refe","price":43,"discount":23,"count":43,"rate":null,"images":["http:\/\/api.jeemsolutions.com.sa\/storage\/products\/U4dWlzU4MY3NnKJoiNaAhXTChGk4RINga4r9HVUd.png","http:\/\/api.jeemsolutions.com.sa\/storage\/products\/8CmoXy1ciP5tIf3oHmSiNWC4UTIwj2vB6o147gMJ.png","http:\/\/api.jeemsolutions.com.sa\/storage\/products\/y6zhviCWvBwxSqEc0cQ1gultnIzbTpwZdA85mPI9.png"],"seller":{"name":"Mahmoud Abd alziem"}}],"first_page_url":"http:\/\/localhost\/api\/buyer\/products?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/buyer\/products?page=1","next_page_url":null,"path":"http:\/\/localhost\/api\/buyer\/products","per_page":12,"prev_page_url":null,"to":4,"total":4}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '49'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/product/{product}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product:
+        name: product
+        description: ''
+        required: true
+        example: velit
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":true,"message":"Success retrive","data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '48'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/sort/{sort}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      sort:
+        name: sort
+        description: ''
+        required: true
+        example: laudantium
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '47'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/search/{search}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      search:
+        name: search
+        description: ''
+        required: true
+        example: est
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":true,"message":"Success retrive","data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '46'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/buyer/filter
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      price:
+        name: price
+        description: ''
+        required: true
+        example: qui
+        type: string
+      city:
+        name: city
+        description: ''
+        required: true
+        example: molestias
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/best-products
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":true,"message":"Success retrive","data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '45'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/seller/{seller}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seller:
+        name: seller
+        description: ''
+        required: true
+        example: voluptas
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '44'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/post/comments/{post}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post:
+        name: post
+        description: ''
+        required: true
+        example: 20
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Post\\Post] 20"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '43'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/auth
+    metadata:
+      title: 'Shoe Method For Buyer'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/buyer/logout
+    metadata:
+      title: 'LogOut Method From Buyer'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/buyer/setting
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/buyer/info
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/notification
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/buyer/notification
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: api/buyer/notification
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/profile
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/orders
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/invoice/{code}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: iure
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/wishlist
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/buyer/wishlist/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the wishlist.'
+        required: true
+        example: dolores
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/buyer/wishlist/{product}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product:
+        name: product
+        description: ''
+        required: true
+        example: est
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/messages
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/message/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the message.'
+        required: true
+        example: ut
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/meetings
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/cart
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/buyer/delete/{code}'
+    metadata:
+      title: 'Show the form for remove order.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: ut
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/buyer/order/count
+    metadata:
+      title: 'Show the form for remove order.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: perferendis
+        type: string
+      count:
+        name: count
+        description: ''
+        required: true
+        example: 63.705
+        type: number
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/reviews
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/buyer/review
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: earum
+        type: string
+      review_id:
+        name: review_id
+        description: ''
+        required: false
+        example: null
+        type: string
+      content:
+        name: content
+        description: ''
+        required: true
+        example: repudiandae
+        type: string
+      count:
+        name: count
+        description: 'Must not be greater than 5.'
+        required: true
+        example: 3
+        type: number
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/buyer/review/{review}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      review:
+        name: review
+        description: ''
+        required: true
+        example: 17
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/buyer/review
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: aut
+        type: string
+      review_id:
+        name: review_id
+        description: ''
+        required: false
+        example: null
+        type: string
+      content:
+        name: content
+        description: ''
+        required: true
+        example: quod
+        type: string
+      count:
+        name: count
+        description: 'Must not be greater than 5.'
+        required: true
+        example: 5
+        type: number
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/buyer/post/comment/{post}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post:
+        name: post
+        description: ''
+        required: true
+        example: 10
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/buyer/post/like/{post}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post:
+        name: post
+        description: ''
+        required: true
+        example: 6
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/login
+    metadata:
+      title: 'Login Method For Seller Dashboard'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: yasmeen.satterfield@example.org
+        type: string
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: abfcy
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/active/{token}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: et
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":false,"message":"this token not found or expired"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '42'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/seller/active/{token}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: cupiditate
+        type: string
+    queryParameters: []
+    bodyParameters:
+      phone:
+        name: phone
+        description: 'Must be at least 6.'
+        required: true
+        example: 1
+        type: number
+      email:
+        name: email
+        description: 'Must be at least 6.'
+        required: true
+        example: 3
+        type: number
+      file:
+        name: file
+        description: 'Must be a file.'
+        required: true
+        example: null
+        type: file
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/register
+    metadata:
+      title: 'Login Method For Seller Dashboard'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 40 characters.'
+        required: true
+        example: pfnqjkeajzj
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: ukozey@example.net
+        type: string
+      password:
+        name: password
+        description: 'The value and <code>confirm-password</code> must match. Must be at least 8 characters.'
+        required: true
+        example: muf
+        type: string
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: 68906.429
+        type: number
+      city:
+        name: city
+        description: ''
+        required: true
+        example: est
+        type: string
+      category:
+        name: category
+        description: ''
+        required: true
+        example: 20431.974302806
+        type: number
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/phone/{token}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: accusantium
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '41'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/reset
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/seller/renew/{token}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: sapiente
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/renew/{token}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: cupiditate
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":false,"message":"this token not found or expired"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '40'
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/logout
+    metadata:
+      title: 'LogOut Method From Seller'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/auth
+    metadata:
+      title: 'seller Method For Seller Dashboard'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/dashboard
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/seller/setting
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: 'n'
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/seller/info
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/notification
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/notification
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: api/seller/notification
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/product
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/subcategory
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/product
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must be at least 3 characters. Must not be greater than 150 characters.'
+        required: true
+        example: uxssqrfrtjkgowcllywmdszleqapojbgdacqxyiasdlkaspytzhl
+        type: string
+      subtitle:
+        name: subtitle
+        description: ''
+        required: true
+        example: sunt
+        type: string
+      descri:
+        name: descri
+        description: ''
+        required: true
+        example: est
+        type: string
+      price:
+        name: price
+        description: ''
+        required: true
+        example: 419.4498
+        type: number
+      discount:
+        name: discount
+        description: ''
+        required: true
+        example: 6868102.281065
+        type: number
+      count:
+        name: count
+        description: ''
+        required: true
+        example: !!float 71
+        type: number
+      image:
+        name: image
+        description: ''
+        required: true
+        example:
+          - quo
+        type: 'string[]'
+      m_neg:
+        name: m_neg
+        description: 'Must not be greater than 99.'
+        required: true
+        example: 83
+        type: number
+      tag:
+        name: tag
+        description: ''
+        required: false
+        example: 2086042.8
+        type: number
+      carousel:
+        name: carousel
+        description: ''
+        required: false
+        example: 53210336.6
+        type: number
+      category:
+        name: category
+        description: ''
+        required: false
+        example: 15246060.959205
+        type: number
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/product/status/{id}'
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the status.'
+        required: true
+        example: voluptatem
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/product/excel
+    metadata:
+      title: 'Import Product FRom Excel Sheet.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      file:
+        name: file
+        description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+        required: true
+        example: null
+        type: file
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/product/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 8
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must be at least 3 characters. Must not be greater than 150 characters.'
+        required: true
+        example: ooshmyqxemhfeawpohadqbjvnhumkqbwsqzgunnmjpzxlmfadtrytluosynjwgwlzyhnqsjhlzdamhtxokuwegmppmewoyviucyvcsecztqi
+        type: string
+      subtitle:
+        name: subtitle
+        description: ''
+        required: true
+        example: iure
+        type: string
+      descri:
+        name: descri
+        description: ''
+        required: true
+        example: repellendus
+        type: string
+      price:
+        name: price
+        description: ''
+        required: true
+        example: 426.748721
+        type: number
+      discount:
+        name: discount
+        description: ''
+        required: true
+        example: !!float 5
+        type: number
+      count:
+        name: count
+        description: ''
+        required: true
+        example: 55567960.665364
+        type: number
+      image:
+        name: image
+        description: ''
+        required: true
+        example:
+          - ratione
+        type: 'string[]'
+      m_neg:
+        name: m_neg
+        description: 'Must not be greater than 99.'
+        required: true
+        example: 67
+        type: number
+      tag:
+        name: tag
+        description: ''
+        required: false
+        example: 181.314196
+        type: number
+      carousel:
+        name: carousel
+        description: ''
+        required: false
+        example: 634.81555
+        type: number
+      category:
+        name: category
+        description: ''
+        required: false
+        example: 3359.69
+        type: number
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/product/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: eum
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/product/{product}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product:
+        name: product
+        description: ''
+        required: true
+        example: 16
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/product/{image}/image'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      image:
+        name: image
+        description: ''
+        required: true
+        example: blanditiis
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/meeting
+    metadata:
+      title: 'list All Meetings'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/meeting
+    metadata:
+      title: 'Create Meeting'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: praesentium
+        type: string
+      topic:
+        name: topic
+        description: ''
+        required: true
+        example: odit
+        type: string
+      start:
+        name: start
+        description: 'Must be a valid date.'
+        required: true
+        example: '2021-11-14T19:24:37'
+        type: string
+      agenda:
+        name: agenda
+        description: ''
+        required: false
+        example: hic
+        type: string
+      duration:
+        name: duration
+        description: 'Must be a valid date.'
+        required: true
+        example: '2021-11-14T19:24:37'
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/meeting/{meeting}'
+    metadata:
+      title: 'get Meeting'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      meeting:
+        name: meeting
+        description: ''
+        required: true
+        example: 20
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/meeting/{meeting}'
+    metadata:
+      title: 'Update Meeting'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      meeting:
+        name: meeting
+        description: ''
+        required: true
+        example: 2
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: ut
+        type: string
+      topic:
+        name: topic
+        description: ''
+        required: true
+        example: quod
+        type: string
+      start:
+        name: start
+        description: 'Must be a valid date.'
+        required: true
+        example: '2021-11-14T19:24:37'
+        type: string
+      agenda:
+        name: agenda
+        description: ''
+        required: false
+        example: et
+        type: string
+      duration:
+        name: duration
+        description: 'Must be a valid date.'
+        required: true
+        example: '2021-11-14T19:24:37'
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/meeting/{id}'
+    metadata:
+      title: 'Delete Meeting'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the meeting.'
+        required: true
+        example: '379226'
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/tag
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/tag
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: praesentium
+        type: string
+      image:
+        name: image
+        description: 'Must be an image. Must not be greater than 2024 kilobytes.'
+        required: true
+        example: null
+        type: file
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/tag/status/{tag}'
+    metadata:
+      title: 'Update Tag Status'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      tag:
+        name: tag
+        description: ''
+        required: true
+        example: 12
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/tag/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the tag.'
+        required: true
+        example: 7
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: nihil
+        type: string
+      image:
+        name: image
+        description: 'Must be an image. Must not be greater than 2024 kilobytes.'
+        required: true
+        example: null
+        type: file
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/tag/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the tag.'
+        required: true
+        example: est
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/tag/{tag}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      tag:
+        name: tag
+        description: ''
+        required: true
+        example: 16
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/post
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/post
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      content:
+        name: content
+        description: ''
+        required: true
+        example: reiciendis
+        type: string
+      image:
+        name: image
+        description: 'Must be an image. Must not be greater than 2024 kilobytes.'
+        required: true
+        example: null
+        type: file
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/post/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the post.'
+        required: true
+        example: 3
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      content:
+        name: content
+        description: ''
+        required: true
+        example: facere
+        type: string
+      image:
+        name: image
+        description: 'Must be an image. Must not be greater than 2024 kilobytes.'
+        required: true
+        example: null
+        type: file
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/post/comment/{post}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post:
+        name: post
+        description: ''
+        required: true
+        example: 4
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/post/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the post.'
+        required: true
+        example: reiciendis
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/post/{post}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post:
+        name: post
+        description: ''
+        required: true
+        example: 15
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/carousel
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/carousel
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must be at least 3 characters. Must not be greater than 60 characters.'
+        required: true
+        example: kpqgwlgedgvxhxtlwf
+        type: string
+      subtitle:
+        name: subtitle
+        description: ''
+        required: true
+        example: et
+        type: string
+      image:
+        name: image
+        description: 'Must be an image. Must not be greater than 2024 kilobytes.'
+        required: true
+        example: null
+        type: file
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/carousel/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the carousel.'
+        required: true
+        example: 7
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must be at least 3 characters. Must not be greater than 60 characters.'
+        required: true
+        example: ssxulfscob
+        type: string
+      subtitle:
+        name: subtitle
+        description: ''
+        required: true
+        example: quos
+        type: string
+      image:
+        name: image
+        description: 'Must be an image. Must not be greater than 2024 kilobytes.'
+        required: true
+        example: null
+        type: file
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/carousel/status/{carousel}'
+    metadata:
+      title: 'Update Carousel Status'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      carousel:
+        name: carousel
+        description: ''
+        required: true
+        example: 5
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/carousel/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the carousel.'
+        required: true
+        example: aut
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/carousel/{carousel}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      carousel:
+        name: carousel
+        description: ''
+        required: true
+        example: 11
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/subseller
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/subseller
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: eaih
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: rogahn.marina@example.net
+        type: string
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: ing
+        type: string
+      permission:
+        name: permission
+        description: ''
+        required: true
+        example:
+          - voluptas
+        type: 'string[]'
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/permission
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/subseller/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the subseller.'
+        required: true
+        example: 15
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: zvjullwmctckzgvoxyxjlnvhece
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: annetta81@example.org
+        type: string
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: yjoogbpy
+        type: string
+      permission:
+        name: permission
+        description: ''
+        required: true
+        example:
+          - non
+        type: 'string[]'
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/subseller/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the subseller.'
+        required: true
+        example: adipisci
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/subseller/{subseller}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      subseller:
+        name: subseller
+        description: ''
+        required: true
+        example: 6
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/invoice
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/invoice/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the invoice.'
+        required: true
+        example: eos
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/invoice
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: aut
+        type: string
+      image:
+        name: image
+        description: 'Must be an image. Must not be greater than 2024 kilobytes.'
+        required: true
+        example: null
+        type: file
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/invoice/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the invoice.'
+        required: true
+        example: 15
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: non
+        type: string
+      image:
+        name: image
+        description: 'Must be an image. Must not be greater than 2024 kilobytes.'
+        required: true
+        example: null
+        type: file
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/invoice/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the invoice.'
+        required: true
+        example: 16
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/manual_products
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/manual_products/{manual}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      manual:
+        name: manual
+        description: ''
+        required: true
+        example: autem
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/manual_products
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 60 characters.'
+        required: true
+        example: mvwjfzivalwdqcajsorttnkoqhsmifwqwbytcfwfzrdszxwayfgzbznwr
+        type: string
+      tax:
+        name: tax
+        description: 'Must be at least 15 characters. Must not be greater than 15 characters.'
+        required: true
+        example: nrihlseeltpd
+        type: string
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: 265.4
+        type: number
+      address:
+        name: address
+        description: ''
+        required: true
+        example: magni
+        type: string
+      file:
+        name: file
+        description: 'Must be a file.'
+        required: false
+        example: null
+        type: file
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/manual_products/{manual}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      manual:
+        name: manual
+        description: ''
+        required: true
+        example: est
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/manual_products/{manual}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      manual:
+        name: manual
+        description: ''
+        required: true
+        example: 15
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/voucher
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/voucher/{voucher_id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      voucher_id:
+        name: voucher_id
+        description: 'The ID of the voucher.'
+        required: true
+        example: et
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/voucher
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: sint
+        type: string
+      check:
+        name: check
+        description: ''
+        required: true
+        example: quo
+        type: string
+      price:
+        name: price
+        description: ''
+        required: true
+        example: 381032.88
+        type: number
+      receiver:
+        name: receiver
+        description: ''
+        required: true
+        example: quidem
+        type: string
+      for:
+        name: for
+        description: ''
+        required: true
+        example: incidunt
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/voucher/{voucher_id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      voucher_id:
+        name: voucher_id
+        description: 'The ID of the voucher.'
+        required: true
+        example: recusandae
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/voucher/{voucher_id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      voucher_id:
+        name: voucher_id
+        description: 'The ID of the voucher.'
+        required: true
+        example: in
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/message
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/seller/message
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      message:
+        name: message
+        description: 'Must not be greater than 1000 characters.'
+        required: true
+        example: dtkjnyvltbsrwlkvcxzdyrtwihzxzrirwoanavmemfj
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seller/message/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the message.'
+        required: true
+        example: 6
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/seller/message/{message}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      message:
+        name: message
+        description: ''
+        required: true
+        example: 20
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/message/{message}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      message:
+        name: message
+        description: ''
+        required: true
+        example: 12
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/order
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/seller/order/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the order.'
+        required: true
+        example: 1
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/order/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the order.'
+        required: true
+        example: 8
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/seller/delivery
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/buyer/negotiate/{title}'
+    metadata:
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: sed
+        type: string
+    queryParameters: []
+    bodyParameters:
+      count:
+        name: count
+        description: ''
+        required: true
+        example: 56965.729
+        type: number
+      price:
+        name: price
+        description: ''
+        required: true
+        example: 87334.23127
+        type: number
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/negotiate
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/negotiate/accept/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the accept.'
+        required: true
+        example: fugiat
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buyer/negotiate/reject/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the reject.'
+        required: true
+        example: non
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/buyer/order/{product}'
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product:
+        name: product
+        description: ''
+        required: true
+        example: expedita
+        type: string
+    queryParameters: []
+    bodyParameters:
+      count:
+        name: count
+        description: ''
+        required: false
+        example: 1113.199
+        type: number
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/buyer/order/{code}/status'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: iusto
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/buyer/orders/status
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buyer/address
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+          access-control-allow-methods: 'GET, POST, PUT, DELETE, OPTIONS'
+          access-control-allow-headers: ' Origin, Content-Type, Accept, Authorization, X-Request-With'
+          access-control-allow-credentials: ' true'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/buyer/address
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/buyer/address/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the address.'
+        required: true
+        example: omnis
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/buyer/order/{code}/cancel'
+    metadata:
+      title: 'Show the form for cancle order.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      code:
+        name: code
+        description: ''
+        required: true
+        example: dignissimos
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []

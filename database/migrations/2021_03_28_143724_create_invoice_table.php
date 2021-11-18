@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateInvoiceTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('invoice', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->unique();
+            $table->string('image_name')->default('avatar.svg');
+            $table->string('image_path')->default('images/default/avatar.svg');
+            $table->foreignId('seller_id')->constrained('sellers')->onDelete('cascade');
+            $table->unsignedInteger('shipping_charge')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('invoice');
+    }
+}
